@@ -174,7 +174,7 @@
             border: 1px solid var(--border-light);
             width: 100%;
             max-width: 800px;
-            overflow: hidden; /* Fix: Added for collapsibles */
+            overflow: hidden;
         }
         .rule-card-header {
             padding: 1rem 1.5rem;
@@ -201,7 +201,7 @@
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .example-title { font-weight: 700; color: var(--color-gold-dark); margin-bottom: 0.75rem; }
         .example-item { font-size: 1.2rem; font-family: 'Amiri', serif; color: var(--ink-red); padding: 0.5rem 0; display: flex; align-items: center; justify-content: space-between; }
-        .audio-icon { cursor: pointer; color: var(--color-gold-dark); margin-right: 1rem; }
+        .audio-icon { cursor: pointer; color: var(--color-gold-dark); margin-right: 1rem; background: none; border: none;}
         .audio-icon:hover { color: var(--text-dark); }
         
         .rule-title { font-size: 2rem; font-weight: 700; text-align: right; color: var(--color-gold-dark); }
@@ -584,63 +584,63 @@
                 <h2 class="rule-title text-3xl md:text-4xl">الفهرس</h2>
             </div>
             <div id="main-hub" class="main-hub p-4 md:p-8 gap-4 md:gap-6">
-                <div class="hub-card p-4 md:p-6">
+                <div class="hub-card p-4 md:p-6" data-target="noon-sakinah-section">
                     <div class="card-content">
                        <div class="icon">ن</div>
                        <h2 class="title-font text-xl mt-4">أحكام النون الساكنة والتنوين</h2>
                        <p class="text-sm mt-2">تعلم قواعد الإظهار، الإدغام، الإقلاب، والإخفاء.</p>
                    </div>
                </div>
-               <div class="hub-card p-4 md:p-6">
+               <div class="hub-card p-4 md:p-6" data-target="meem-sakinah-section">
                    <div class="card-content">
                        <div class="icon">مْ</div>
                        <h2 class="title-font text-xl mt-4">أحكام الميم الساكنة</h2>
                        <p class="text-sm mt-2">اكتشف قواعد الإخفاء والإدغام والإظهار الشفوي.</p>
                    </div>
                </div>
-               <div class="hub-card p-4 md:p-6">
+               <div class="hub-card p-4 md:p-6" data-target="madd-section">
                    <div class="card-content">
                        <div class="icon">ـا</div>
                        <h2 class="title-font text-xl mt-4">باب المدود</h2>
                        <p class="text-sm mt-2">تعرف على أنواع المد الطبيعي والفرعي وأزمنتها.</p>
                    </div>
                </div>
-               <div class="hub-card p-4 md:p-6">
+               <div class="hub-card p-4 md:p-6" data-target="sifaat-section">
                    <div class="card-content">
                        <div class="icon">ص</div>
                        <h2 class="title-font text-xl mt-4">صفات الحروف</h2>
                        <p class="text-sm mt-2">ادرس الصفات التي تميز كل حرف عن الآخر.</p>
                    </div>
                </div>
-               <div class="hub-card p-4 md:p-6">
+               <div class="hub-card p-4 md:p-6" data-target="makharij-section">
                     <div class="card-content">
                        <div class="icon">م</div>
                        <h2 class="title-font text-xl mt-4">مخارج الحروف</h2>
                        <p class="text-sm mt-2">تعلم الموضع الدقيق لنطق كل حرف من حروف الهجاء.</p>
                    </div>
                </div>
-               <div class="hub-card p-4 md:p-6">
+               <div class="hub-card p-4 md:p-6" data-target="waqf-section">
                     <div class="card-content">
                        <div class="icon">ف</div>
                        <h2 class="title-font text-xl mt-4">باب الوقف والابتداء</h2>
                        <p class="text-sm mt-2">تعلم متى تقف وكيف تبدأ التلاوة بشكل صحيح.</p>
                    </div>
                </div>
-               <div class="hub-card p-4 md:p-6">
+               <div class="hub-card p-4 md:p-6" data-target="relations-section">
                     <div class="card-content">
                        <div class="icon">ل</div>
                        <h2 class="title-font text-xl mt-4">علاقات الحروف</h2>
                        <p class="text-sm mt-2">ادرس أحكام المثلين والمتقاربين والمتجانسين.</p>
                    </div>
                </div>
-               <div class="hub-card p-4 md:p-6">
+               <div class="hub-card p-4 md:p-6" data-target="practice-section">
                     <div class="card-content">
                        <div class="icon">📖</div>
                        <h2 class="title-font text-xl mt-4">التطبيق العملي</h2>
                        <p class="text-sm mt-2">استخرج الأحكام بنفسك من آيات قرآنية.</p>
                    </div>
                </div>
-                 <div class="hub-card p-4 md:p-6">
+                 <div class="hub-card p-4 md:p-6" data-target="quiz-section">
                      <div class="card-content">
                          <div class="icon">؟</div>
                          <h2 class="title-font text-xl mt-4">الاختبار الشامل</h2>
@@ -694,7 +694,7 @@
                                 </thead>
                                 <tbody>
                                     <tr><td>1</td><td>الجوف</td><td>3</td><td>حروف المد (ا، و، ي)</td></tr>
-                                    <tr><td>2</td><td>الحلق</td><td>6</td><td>(ء، هـ، ع، ح، غ، خ)</td></tr>
+                                    <tr><td>2</td><td>الحلق</td><td>6</td><td>(أ، هـ، ع، ح، غ، خ)</td></tr>
                                     <tr><td>3</td><td>اللسان</td><td>18</td><td>(ق، ك، ج، ش، ي...)</td></tr>
                                     <tr><td>4</td><td>الشفتان</td><td>4</td><td>(ف، ب، م، و)</td></tr>
                                     <tr><td>5</td><td>الخيشوم</td><td>1</td><td>الغنّة (ن، م)</td></tr>
@@ -790,7 +790,26 @@
         </div>
         <div id="waqf-section" class="page-section hidden"> <div class="mind-map-container p-4 md:p-8"> <div class="node text-center"> <h1 class="text-3xl md:text-4xl font-bold mb-2 title-font">باب الوقف والابتداء</h1> <p class="text-gray-400">فن معرفة المواضع التي يحسن الوقف عليها وما يحسن الابتداء به.</p> </div><div class="rule-card"><div class="rule-card-header"><h2 class="rule-title text-2xl md:text-3xl">أنواع الوقف الاختياري</h2></div><div class="rule-card-body space-y-4 text-base"><div><h4><strong>1. الوقف التام:</strong> هو الوقف على كلام تام المعنى، لا يتعلق بما بعده لفظًا ولا معنى. مثاله: الوقف على "نَسْتَعِينُ" في سورة الفاتحة.</h4></div><div><h4><strong>2. الوقف الكافي:</strong> هو الوقف على كلام تام المعنى، لكنه يتعلق بما بعده معنى لا لفظًا. مثاله: الوقف على "لَا رَيْبَ فِيهِ" في سورة البقرة.</h4></div><div><h4><strong>3. الوقف الحسن:</strong> هو الوقف على كلام تام المعنى، لكنه يتعلق بما بعده لفظًا ومعنى. يحسن الوقف عليه ولكن لا يحسن الابتداء بما بعده. مثاله: الوقف على "الْحَمْدُ لِلَّهِ" من قوله "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ".</h4></div><div><h4><strong>4. الوقف القبيح:</strong> هو الوقف على كلام لم يتم معناه، أو يوهم معنى فاسدًا. لا يجوز تعمده. مثاله: الوقف على "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَقْرَبُوا الصَّلَاةَ".</h4></div></div></div></div> </div>
         <div id="relations-section" class="page-section hidden"> <div class="mind-map-container p-4 md:p-8"> <div class="node text-center"> <h1 class="text-3xl md:text-4xl font-bold mb-2 title-font">علاقات الحروف</h1> <p class="text-gray-400">الأحكام الناشئة عن التقاء الحروف ببعضها.</p> </div><div class="rule-card"><div class="rule-card-header"><h2 class="rule-title text-2xl md:text-3xl">أنواع العلاقات</h2></div><div class="rule-card-body space-y-4 text-base"><div><h4><strong>1. المثلان:</strong> الحرفان اللذان اتحدا اسمًا ورسمًا ومخرجًا وصفة. حكم إدغام الأول في الثاني إن كان الأول ساكنًا (مثلين صغير). مثاله: "اضْرِب بِّعَصَاكَ".</h4></div><div><h4><strong>2. المتجانسان:</strong> الحرفان اللذان اتحدا مخرجًا واختلفا صفة. حكمه الإدغام في أغلب الحالات إن كان الأول ساكنًا. مثاله: "قَد تَّبَيَّnَ".</h4></div><div><h4><strong>3. المتقاربان:</strong> الحرفان اللذان تقاربا مخرجًا وصفة. حكمه الإدغام في حالات خاصة. مثاله: "قُل رَّبِّ".</h4></div><div><h4><strong>4. المتباعدان:</strong> الحرفان اللذان تباعدا مخرجًا واختلفا صفة. حكمه الإظهار دائمًا.</h4></div></div></div></div> </div>
-        <div id="practice-section" class="page-section hidden"> <div class="mind-map-container p-4 md:p-8"> <div class="node text-center"> <h1 class="text-3xl md:text-4xl font-bold mb-2 title-font">التطبيق العملي</h1> <p class="text-gray-400">استخرج الأحكام بنفسك من الآيات.</p> </div><div class="rule-card text-center"><div class="rule-card-header"><h2 class="rule-title text-2xl md:text-3xl">تدريب على سورة الإخلاص</h2></div><div class="rule-card-body"><div class="practice-verse text-2xl md:text-4xl leading-loose md:leading-loose"><span class="practice-word" data-info="قُلْ: القاف مفخمة واللام مظهرة.">قُلْ</span> <span class="practice-word" data-info="هُوَ: هاء مرققة.">هُوَ</span> <span class="practice-word" data-info="اللَّهُ: لام لفظ الجلالة مفخمة لأن ما قبلها مضموم.">اللَّهُ</span> <span class="practice-word" data-info="أَحَدٌ (١) اللَّهُ: تنوين بعده همزة وصل، عند الوصل تسقط الهمزة ونون التنوين الساكنة تحرك بالكسر لالتقاء الساكنين (أَحَدُنِ اللَّهُ).">أَحَدٌ</span> (١) <span class="practice-word" data-info="الصَّمَدُ: الصاد مفخمة ومستعلية ومطبقة وفيها صفير.">الصَّمَدُ</span> (٢) <span class="practice-word" data-info="لَمْ يَلِدْ: ميم ساكنة مظهرة (إظهار شفوي). الدال في (يَلِدْ) مقلقلة عند الوقف.">لَمْ يَلِدْ</span> <span class="practice-word" data-info="وَلَمْ يُولَدْ: ميم ساكنة مظهرة (إظهار شفوي). الدال في (يُولَدْ) مقلقلة عند الوقف.">وَلَمْ يُولَدْ</span> (٣) <span class="practice-word" data-info="وَلَمْ يَكُن لَّهُ: إدغام النون في اللام (إدغام كامل بلا غنة).">وَلَمْ يَكُن لَّهُ</span> <span class="practice-word" data-info="كُفُوًا أَحَدٌ: تنوين بعده همزة (إظهار حلقي).">كُفُوًا أَحَدٌ</span> (٤)</div><div id="practice-info" class="mt-4 p-4 rounded-md bg-amber-50 text-amber-900 border border-amber-200 hidden min-h-[50px]"></div></div></div></div> </div>
+        <div id="practice-section" class="page-section hidden"> <div class="mind-map-container p-4 md:p-8"> <div class="node text-center"> <h1 class="text-3xl md:text-4xl font-bold mb-2 title-font">التطبيق العملي</h1> <p class="text-gray-400">استخرج الأحكام بنفسك من الآيات.</p> </div><div class="rule-card text-center"><div class="rule-card-header"><h2 class="rule-title text-2xl md:text-3xl">تدريب على سورة الإخلاص</h2></div><div class="rule-card-body"><div class="practice-verse text-2xl md:text-4xl leading-loose md:leading-loose">
+            <div class="example-item" data-audio-id="112001">
+                <span class="practice-word" data-info="قُلْ: القاف مفخمة واللام مظهرة.">قُلْ</span> 
+                <span class="practice-word" data-info="هُوَ: هاء مرققة.">هُوَ</span> 
+                <span class="practice-word" data-info="اللَّهُ: لام لفظ الجلالة مفخمة لأن ما قبلها مضموم.">اللَّهُ</span> 
+                <span class="practice-word" data-info="أَحَدٌ: الدال مقلقلة عند الوقف.">أَحَدٌ</span> (١)
+            </div>
+            <div class="example-item" data-audio-id="112002">
+                <span class="practice-word" data-info="اللَّهُ: لام لفظ الجلالة مفخمة.">اللَّهُ</span>
+                <span class="practice-word" data-info="الصَّمَدُ: الصاد مفخمة والدال مقلقلة عند الوقف.">الصَّمَدُ</span> (٢)
+            </div>
+            <div class="example-item" data-audio-id="112003">
+                <span class="practice-word" data-info="لَمْ يَلِدْ: ميم ساكنة مظهرة (إظهار شفوي). الدال في (يَلِدْ) مقلقلة عند الوقف.">لَمْ يَلِدْ</span> 
+                <span class="practice-word" data-info="وَلَمْ يُولَدْ: ميم ساكنة مظهرة (إظهار شفوي). الدال في (يُولَدْ) مقلقلة عند الوقف.">وَلَمْ يُولَدْ</span> (٣)
+            </div>
+             <div class="example-item" data-audio-id="112004">
+                <span class="practice-word" data-info="وَلَمْ يَكُن لَّهُ: إدغام النون في اللام (إدغام كامل بلا غنة).">وَلَمْ يَكُن لَّهُ</span> 
+                <span class="practice-word" data-info="كُفُوًا أَحَدٌ: تنوين بعده همزة (إظهار حلقي).">كُفُوًا أَحَدٌ</span> (٤)
+            </div>
+        </div><div id="practice-info" class="mt-4 p-4 rounded-md bg-amber-50 text-amber-900 border border-amber-200 hidden min-h-[50px]"></div></div></div></div> </div>
         <div id="quiz-section" class="page-section hidden"> <div class="mind-map-container p-4 md:p-8"> <div class="rule-card text-center"><div class="rule-card-header"><h2 class="rule-title text-2xl md:text-3xl">الاختبار الشامل</h2></div><div class="rule-card-body"> <p class="mb-4">هل أنت مستعد لاختبار معلوماتك؟ أدر العجلة واحصل على سؤال عشوائي!</p> <div class="wheel-container"><div id="spinner"></div><div class="arrow"></div></div> <button id="spin-btn">أدر العجلة!</button> <div id="question-display" class="hidden mt-6"><h3 id="question-text" class="text-xl font-bold text-slate-800 mb-4 text-right"></h3><div id="options-container" class="space-y-2"></div><p id="feedback-text" class="mt-4 font-bold"></p></div> </div></div> </div> </div>
     </div>
 
@@ -799,29 +818,47 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
+            // --- DATA ---
+            const audioData = {
+                "مَنْ ءَامَنَ": "002062",
+                "يَنْأَوْنَ": "006026",
+                "كُلٌّ ءَامَنَ": "002285",
+                "وجَنَّاتٍ أَلفَافًا": "078016",
+                "أَنْهَارٌ": "002025",
+                "إِنْ هُوَ": "007184",
+                "جُرُفٍ هَارٍ": "009109",
+                "سَلَامٌ هِيَ": "097005",
+                "تَرْمِيهِمْ بِحِجَارَةٍ": "105004",
+                "يَعْتَصِمْ بِاللَّهِ": "004146",
+                "وَهُمْ بَارِزُونَ": "014021",
+                "وَلَكُمْ مَا كَسَبْتُمْ": "002134",
+                "أَطْعَمَهُمْ مِنْ جُوعٍ": "106004",
+                "فِي قُلُوبِهِمْ مَرَضٌ": "002010"
+            };
             const examplesData = {
                 noon: {
                     hamza: { title: 'أمثلة (ء)', noun: ['"مَنْ ءَامَنَ"', '"يَنْأَوْنَ"'], tanween: ['"كُلٌّ ءَامَنَ"', '"وجَنَّاتٍ أَلفَافًا"'] }, haa: { title: 'أمثلة (هـ)', noun: ['"أَنْهَارٌ"', '"إِنْ هُوَ"'], tanween: ['"جُرُفٍ هَارٍ"', '"سَلَامٌ هِيَ"'] }, ain: { title: 'أمثلة (ع)', noun: ['"أَنْعَمْتَ"', '"مِنْ عِلْمٍ"'], tanween: ['"سَمِيعٌ عَلِيمٌ"', '"حَقِيقٌ عَلَىٰ"'] }, ha: { title: 'أمثلة (ح)', noun: ['"وَانْحَرْ"', '"يَنْحِتُونَ"'], tanween: ['"عَزِيزٌ حَكِيمٌ"', '"عَلِيمٌ حَلِيمٌ"'] }, ghain: { title: 'أمثلة (غ)', noun: ['"فَسَيُنْغِضُونَ"', '"مِنْ غِلٍّ"'], tanween: ['"عَفُوًّا غَفُورًا"', '"قَوْلاً غَيْرَ"'] }, khaa: { title: 'أمثلة (خ)', noun: ['"وَالْمُنْخَنِقَةُ"', '"مِنْ خَيْرٍ"'], tanween: ['"عَلِيمٌ خَبِيرٌ"', '"يَوْمَئِذٍ خَاشِعَةٌ"'] }, yaa: { title: 'أمثلة (ي)', noun: ['"فَمَن يَّعْمَلْ"'], tanween: ['"خَيْرٌ يَّرَهُ"', '"وُجُوهٌ يَّوْمَئِذٍ"'] }, noun: { title: 'أمثلة (ن)', noun: ['"عَن نَّفْسٍ"'], tanween: ['"آمِنَةٌ نُّعَاسًا"', '"يَوْمَئِذٍ نَّاعِمَةٌ"'] }, mim: { title: 'أمثلة (م)', noun: ['"مِن مَّالٍ"'], tanween: ['"قَوْلاً مِّن"', '"خَيْرٌ مِّنْهُ"'] }, waw: { title: 'أمثلة (و)', noun: ['"مِن وَّالٍ"'], tanween: ['"غِشَاوَةٌ وَّلَهُمْ"', '"مَعْرُوفٌ وَّمَغْفِرَةٌ"'] }, lam: { title: 'أمثلة (ل)', noun: ['"مِن لَّدُنْهُ"'], tanween: ['"هُدًى لِّلْمُتَّقِينَ"', '"رَسُولٌ لَّكُمْ"'] }, raa: { title: 'أمثلة (ر)', noun: ['"مِن رَّبِّهِمْ"'], tanween: ['"غَفُورٌ رَّحِيمٌ"', '"عِيشَةٍ رَّاضِيَةٍ"'] }, baa: { title: 'أمثلة (ب)', noun: ['"أَنۢبِئْهُمْ"', '"مِنۢ بَعْدِ"'], tanween: ['"سَمِيعٌۢ بَصِيرٌ"', '"عَلِيمٌۢ بِذَاتِ"'] }, sad: { title: 'أمثلة (ص)', noun: ['"يَنصُرُكُمْ"', '"عَن صَلاتِهِمْ"'], tanween: ['"رِيحًا صَرْصَرًا"', '"عَمَلاً صَالِحًا"'] }, thal: { title: 'أمثلة (ذ)', noun: ['"مُنذِرٌ"', '"مِن ذَهَبٍ"'], tanween: ['"شَيءٍ ذَلِكَ"', '"ظِلاًّ ذِي"'] }, thaa: { title: 'أمثلة (ث)', noun: ['"مَنثُورًا"', '"مِن ثَمَرَةٍ"'], tanween: ['"خَيْرًا ثَوَابًا"', '"قَوْلاً ثَقِيلاً"'] }, kaf: { title: 'أمثلة (ك)', noun: ['"مِنكُم"', '"عَن كَعْبَةِ"'], tanween: ['"شَيْءٍ كَبِيرٌ"', '"يَوْمَئِذٍ كَثِيرَةً"'] }, jim: { title: 'أمثلة (ج)', noun: ['"يُنجِيكُمْ"', '"مِن جُوعٍ"'], tanween: ['"خَلْقٍ جَدِيدٍ"', '"فَصَبْرٌ جَمِيلٌ"'] }, shin: { title: 'أمثلة (ش)', noun: ['"يَنشُرْ"', '"مِن شَرِّ"'], tanween: ['"عَذَابٌ شَدِيدٌ"', '"جَنَّةٍ شَرَابًا"'] }, qaf: { title: 'أمثلة (ق)', noun: ['"يَنقَلِبُ"', '"مِن قَبْلُ"'], tanween: ['"عَلِيمٌ قَدِيرٌ"', '"سَمِيعٌ قَرِيبٌ"'] }, sin: { title: 'أمثلة (س)', noun: ['"الإِنسَانُ"', '"عَن سَبِيلِ"'], tanween: ['"رَجُلاً سَلَمًا"', '"خَمْسَةٌ سَادِسُهُمْ"'] }, dal: { title: 'أمثلة (د)', noun: ['"أَندَادًا"', '"مِن دُونِ"'], tanween: ['"قِنْوَانٌ دَانِيَةٌ"', '"كَأْسًا دِهَاقًا"'] }, tah: { title: 'أمثلة (ط)', noun: ['"يَنطِقُونَ"', '"مِن طِينٍ"'], tanween: ['"بَلْدَةٌ طَيِّبَةٌ"', '"حَلالاً طَيِّبًا"'] }, zay: { title: 'أمثلة (ز)', noun: ['"أَنزَلَ"', '"مِن زَوَالٍ"'], tanween: ['"نَفْسًا زَكِيَّةً"', '"يَوْمَئِذٍ زُرْقًا"'] }, faa: { title: 'أمثلة (ف)', noun: ['"يَنفَطِرُ"', '"مِن فَضْلِ"'], tanween: ['"خَالِدًا فِيهَا"', '"عَيْنًا فِيهَا"'] }, taa: { title: 'أمثلة (ت)', noun: ['"كُنتُم"', '"عَن تِلْكَ"'], tanween: ['"جَنَّاتٌ تَجْرِي"', '"حُورٌ تِلْكَ"'] }, dhad: { title: 'أمثلة (ض)', noun: ['"مَنضُودٍ"', '"مِن ضَعْفٍ"'], tanween: ['"قَوْمًا ضَالِّينَ"', '"وُجُوهٌ ضَاحِكَةٌ"'] }, dhaa: { title: 'أمثلة (ظ)', noun: ['"يَنظُرُونَ"', '"مِن ظَهِيرٍ"'], tanween: ['"ظِلاًّ ظَلِيلاً"', '"سَحَابٌ ظُلُمَاتٌ"'] }
                 },
                 meem: {
                     'baa-meem': { title: 'أمثلة (ب)', examples: ['"تَرْمِيهِ<strong>مْ بِ</strong>حِجَارَةٍ"', '"يَعْتَصِ<strong>مْ بِ</strong>اللهِ"', '"وَهُ<strong>مْ بَ</strong>ارِزُونَ"'] },
-                    'mim-meem': { title: 'أمثلة (م)', examples: ['"وَلَكُ<strong>مْ مَّ</strong>ا كَسَبْتُمْ"', '"أَطْعَمَهُ<strong>مْ مِّ</strong>نْ جُوعٍ"', '"فِي قُلُوبِهِ<strong>مْ مَّ</strong>رَضٌ"'] }
+                    'mim-meem': { title: 'أمثلة (م)', examples: ['"وَلَكُ<strong>مْ مَّ</strong>ا كَسَبْتُمْ"', '"أَطْعَمَهُ<strong>مْ mِّ</strong>نْ جُوعٍ"', '"فِي قُلُوبِهِ<strong>مْ مَّ</strong>رَضٌ"'] }
                 }
             };
+            const chapterOrder = ['noon-sakinah-section', 'meem-sakinah-section', 'madd-section', 'sifaat-section', 'makharij-section', 'waqf-section', 'relations-section', 'practice-section', 'quiz-section'];
 
+            // --- DOM ELEMENTS ---
             const introPage = document.getElementById('intro-page');
-            const startBtn = document.getElementById('start-btn');
             const mainContentArea = document.getElementById('main-content-area');
             const mainContentBody = document.getElementById('main-content-body');
             const chapterContent = document.getElementById('chapter-content');
             const chapterBody = document.getElementById('chapter-body');
-            const backBtn = document.getElementById('back-to-hub');
-            const backToIntroBtn = document.getElementById('back-to-intro-btn');
             const allContentHolder = document.getElementById('all-content');
             
             const mainContentTemplate = allContentHolder.querySelector('#main-content-template');
             const footerTemplate = allContentHolder.querySelector('#footer-template footer');
+            const body = document.body;
 
+            // --- INITIALIZATION ---
             if (mainContentBody && mainContentTemplate) {
                 mainContentBody.appendChild(mainContentTemplate.cloneNode(true));
             }
@@ -829,6 +866,7 @@
                 mainContentArea.appendChild(footerTemplate.cloneNode(true));
             }
             
+            // --- FUNCTIONS ---
             function switchView(outgoing, incoming) {
                 if (!outgoing || !incoming) return;
                 outgoing.classList.add('fade-out');
@@ -843,41 +881,9 @@
                     window.scrollTo(0, 0);
                 }, 300);
             }
-            
-            function reinitializeEventListeners(container) {
-                container.querySelectorAll('.letter-node').forEach(node => {
-                    node.addEventListener('click', (e) => {
-                        const letter = node.dataset.letter;
-                        const parent = node.dataset.parent;
-                        if (!examplesData[parent] || !examplesData[parent][letter]) { return; }
-                        const data = examplesData[parent][letter];
-                        const parentCard = node.closest('.rule-card');
-                        if (!parentCard) return;
 
-                        const examplesContainer = parentCard.querySelector('.examples-container');
-                        if (examplesContainer) {
-                            parentCard.querySelectorAll('.letter-node').forEach(n => n.classList.remove('active'));
-                            node.classList.add('active');
-                            
-                            let examplesHtml = '';
-                            if (data.examples) { examplesHtml = data.examples.map(ex => `<div class="example-item text-lg md:text-xl">${ex}</div>`).join(''); }
-                            else { examplesHtml = `<div><p class="example-title">مع النون الساكنة:</p>${data.noun.map(ex => `<div class="example-item text-lg md:text-xl">${ex}</div>`).join('')}</div><div class="mt-4 pt-4 border-t border-amber-200/20"><p class="example-title">مع التنوين:</p>${data.tanween.map(ex => `<div class="example-item text-lg md:text-xl">${ex}</div>`).join('')}</div>`; }
-                            examplesContainer.innerHTML = `<div class="example-panel"><h4 class="text-xl font-bold mb-4">${data.title}</h4>${examplesHtml}</div>`;
-                            addAudioIconsToExamples(examplesContainer);
-                        }
-                    });
-                });
-                 container.querySelectorAll('.practice-word').forEach(word => {
-                     word.addEventListener('click', () => {
-                         const info = word.dataset.info;
-                         const practiceInfoBox = container.querySelector('#practice-info');
-                         if (practiceInfoBox) {
-                             practiceInfoBox.textContent = info;
-                             practiceInfoBox.classList.remove('hidden');
-                         }
-                     });
-                 });
-                container.querySelectorAll('.collapsible-header').forEach(header => {
+            function reinitializeEventListeners(container) {
+                 container.querySelectorAll('.collapsible-header').forEach(header => {
                     header.addEventListener('click', () => {
                         header.classList.toggle('active');
                         const content = header.nextElementSibling;
@@ -888,93 +894,7 @@
                         }
                     });
                 });
-                initializeQuiz(container.querySelector('#quiz-section'));
                 addAudioIconsToExamples(container);
-            }
-
-            function initializeGlobalEventListeners() {
-                if (startBtn) startBtn.addEventListener('click', () => switchView(introPage, mainContentArea));
-
-                if (backToIntroBtn) backToIntroBtn.addEventListener('click', () => {
-                    const currentVisible = !mainContentArea.classList.contains('hidden') ? mainContentArea : chapterContent;
-                    switchView(currentVisible, introPage);
-                });
-                
-                if (backBtn) backBtn.addEventListener('click', () => {
-                    const currentFooter = chapterContent.querySelector('footer');
-                    if(currentFooter) currentFooter.remove();
-                    switchView(chapterContent, mainContentArea)
-                });
-
-                const creatorInfoToggle = document.getElementById('creator-info-toggle');
-                const creatorInfoPanel = document.getElementById('creator-info-panel');
-                if (creatorInfoToggle && creatorInfoPanel) {
-                    creatorInfoToggle.addEventListener('click', () => {
-                        creatorInfoToggle.classList.toggle('active');
-                        creatorInfoPanel.classList.toggle('open');
-                    });
-                }
-                
-                mainContentBody.querySelectorAll('.hub-card').forEach(card => {
-                    card.addEventListener('click', () => {
-                        const targetId = card.dataset.target;
-                        const targetSection = allContentHolder.querySelector(`#${targetId}`);
-                        if (targetSection) {
-                            switchView(mainContentArea, chapterContent);
-                            chapterBody.innerHTML = '';
-                            chapterBody.appendChild(targetSection.cloneNode(true));
-                            chapterBody.querySelector('.page-section').classList.remove('hidden');
-                            
-                            const newChapterFooter = footerTemplate.cloneNode(true);
-                            chapterContent.appendChild(newChapterFooter);
-                            
-                            reinitializeEventListeners(chapterBody);
-                            updateNavButtons();
-                            initializeShareButtons(chapterContent);
-                        }
-                    });
-                });
-
-                const increaseFontBtn = document.getElementById('increase-font');
-                const decreaseFontBtn = document.getElementById('decrease-font');
-                const contrastToggleBtn = document.getElementById('contrast-toggle');
-                const body = document.body;
-                let currentFontSize = 16;
-                if(increaseFontBtn) increaseFontBtn.addEventListener('click', () => { currentFontSize += 1; body.style.fontSize = `${currentFontSize}px`; });
-                if(decreaseFontBtn) decreaseFontBtn.addEventListener('click', () => { currentFontSize = Math.max(12, currentFontSize - 1); body.style.fontSize = `${currentFontSize}px`; });
-                if(contrastToggleBtn) contrastToggleBtn.addEventListener('click', () => body.classList.toggle('high-contrast'));
-
-                const searchBar = document.getElementById('search-bar');
-                const searchBtn = document.getElementById('search-btn');
-                if (searchBtn) searchBtn.addEventListener('click', () => {
-                    searchBar.classList.toggle('active');
-                    if (searchBar.classList.contains('active')) {
-                        searchBar.focus();
-                    }
-                });
-                if (searchBar) searchBar.addEventListener('input', (e) => {
-                    const searchTerm = e.target.value.toLowerCase().trim();
-                    document.querySelectorAll('#main-hub .hub-card').forEach(section => {
-                        const sectionText = section.textContent.toLowerCase();
-                        section.style.display = (searchTerm === '' || sectionText.includes(searchTerm)) ? 'block' : 'none';
-                    });
-                });
-                
-                initializeShareButtons(mainContentArea);
-
-                const prevChapterBtn = document.getElementById('prev-chapter-btn');
-                const nextChapterBtn = document.getElementById('next-chapter-btn');
-                if (prevChapterBtn) prevChapterBtn.addEventListener('click', () => navigateChapter(-1));
-                if (nextChapterBtn) nextChapterBtn.addEventListener('click', () => navigateChapter(1));
-            }
-            
-            function initializeShareButtons(container) {
-                const shareWhatsapp = container.querySelector('#share-whatsapp');
-                const shareFacebook = container.querySelector('#share-facebook');
-                const pageUrl = window.location.href;
-                const pageTitle = document.title;
-                if (shareWhatsapp) shareWhatsapp.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(pageTitle + " - " + pageUrl)}`;
-                if (shareFacebook) shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
             }
             
             function showToast(message) {
@@ -987,23 +907,44 @@
                 }, 3000);
             }
 
-            function playAudio(exampleText) {
-                showToast(`تشغيل صوت المثال: ${exampleText} (ميزة قيد التطوير)`);
+            let audioPlayer = new Audio(); // Global audio player
+
+            function playAudio(audioId) {
+                if (!audioId || audioId === 'undefined') {
+                    showToast('لا يوجد ملف صوتي لهذا المثال حالياً');
+                    return;
+                }
+                const audioSrc = `https://everyayah.com/data/Al-Husary_128kbps/${audioId}.mp3`;
+                
+                if (audioPlayer.src === audioSrc && !audioPlayer.paused) {
+                    audioPlayer.pause();
+                    audioPlayer.currentTime = 0;
+                } else {
+                    audioPlayer.src = audioSrc;
+                    audioPlayer.play().catch(e => {
+                        console.error("Error playing audio:", e);
+                        showToast('حدث خطأ أثناء تحميل الصوت');
+                    });
+                }
             }
             
             function addAudioIconsToExamples(container) {
                 container.querySelectorAll('.example-item').forEach(item => {
                     if (item.querySelector('.audio-icon')) return;
-                    const icon = document.createElement('span');
-                    icon.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.858 17.142a5 5 0 010-7.072m2.828 9.9a9 9 0 010-12.728M12 12h.01"></path></svg>`;
-                    icon.classList.add('audio-icon');
-                    const textContent = item.textContent;
-                    icon.onclick = () => playAudio(textContent);
-                    item.prepend(icon);
+                    
+                    const exampleText = item.textContent.replace(/\(\d+\)/g, '').trim();
+                    const audioId = item.dataset.audioId || audioData[exampleText];
+
+                    if(audioId) {
+                        const icon = document.createElement('button');
+                        icon.type = 'button';
+                        icon.innerHTML = `🔊`;
+                        icon.classList.add('audio-icon', 'text-xl');
+                        icon.dataset.audioId = audioId;
+                        item.prepend(icon);
+                    }
                 });
             }
-
-            const chapterOrder = ['noon-sakinah-section', 'meem-sakinah-section', 'madd-section', 'sifaat-section', 'makharij-section', 'waqf-section', 'relations-section', 'practice-section', 'quiz-section'];
 
             function navigateChapter(direction) {
                 const currentChapter = chapterBody.querySelector('.page-section');
@@ -1038,10 +979,8 @@
                 const spinner = container.querySelector('#spinner');
                 const spinBtn = container.querySelector('#spin-btn');
                 const questionDisplay = container.querySelector('#question-display');
-                const questionText = container.querySelector('#question-text');
-                const optionsContainer = container.querySelector('#options-container');
-                const feedbackText = container.querySelector('#feedback-text');
-                if (!spinBtn || !spinner) return;
+                
+                if (!spinBtn || !spinner || !questionDisplay) return;
 
                 let currentRotation = 0;
                 let currentQuestion = {};
@@ -1050,7 +989,10 @@
                 ];
                 function showQuestion() {
                     currentQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)];
-                    if (!questionDisplay) return;
+                    const questionText = questionDisplay.querySelector('#question-text');
+                    const optionsContainer = questionDisplay.querySelector('#options-container');
+                    const feedbackText = questionDisplay.querySelector('#feedback-text');
+
                     questionDisplay.classList.remove('hidden');
                     questionText.textContent = currentQuestion.q;
                     optionsContainer.innerHTML = '';
@@ -1064,6 +1006,8 @@
                     });
                 }
                 function checkAnswer(selectedOption, btn) {
+                    const optionsContainer = questionDisplay.querySelector('#options-container');
+                    const feedbackText = questionDisplay.querySelector('#feedback-text');
                     Array.from(optionsContainer.children).forEach(child => child.disabled = true);
                     if (selectedOption === currentQuestion.a) {
                         feedbackText.textContent = 'إجابة صحيحة! أحسنت.';
@@ -1089,10 +1033,107 @@
                     setTimeout(() => { spinBtn.disabled = false; showQuestion(); }, 4000);
                 });
             }
+
+            document.addEventListener('click', function(e) {
+                const target = e.target;
+                
+                if(target.closest('#start-btn')) {
+                    switchView(introPage, mainContentArea);
+                    return;
+                }
+
+                if(target.closest('#back-to-intro-btn')) {
+                    const currentVisible = mainContentArea.classList.contains('hidden') ? chapterContent : mainContentArea;
+                    switchView(currentVisible, introPage);
+                    return;
+                }
+
+                if(target.closest('#back-to-hub')) {
+                    switchView(chapterContent, mainContentArea);
+                    return;
+                }
+
+                const hubCard = target.closest('.hub-card');
+                if(hubCard) {
+                    const targetId = hubCard.dataset.target;
+                    const targetSection = allContentHolder.querySelector(`#${targetId}`);
+                    if (targetSection) {
+                        switchView(mainContentArea, chapterContent);
+                        chapterBody.innerHTML = '';
+                        chapterBody.appendChild(targetSection.cloneNode(true));
+                        chapterBody.querySelector('.page-section').classList.remove('hidden');
+                        
+                        const newChapterFooter = footerTemplate.cloneNode(true);
+                        chapterContent.appendChild(newChapterFooter);
+                        
+                        reinitializeEventListeners(chapterBody);
+                        updateNavButtons();
+                    }
+                    return;
+                }
+                
+                if (target.closest('#creator-info-toggle')) {
+                    const creatorInfoPanel = document.getElementById('creator-info-panel');
+                    target.closest('#creator-info-toggle').classList.toggle('active');
+                    creatorInfoPanel.classList.toggle('open');
+                }
+
+                if (target.closest('#increase-font')) {
+                    let currentFontSize = parseFloat(window.getComputedStyle(body).fontSize);
+                    body.style.fontSize = `${currentFontSize + 1}px`;
+                }
+
+                if (target.closest('#decrease-font')) {
+                    let currentFontSize = parseFloat(window.getComputedStyle(body).fontSize);
+                    body.style.fontSize = `${Math.max(12, currentFontSize - 1)}px`;
+                }
+
+                if (target.closest('#contrast-toggle')) {
+                    body.classList.toggle('high-contrast');
+                }
+                
+                if (target.closest('#search-btn')) {
+                    document.getElementById('search-bar').classList.toggle('active');
+                }
+
+                if (target.closest('#prev-chapter-btn')) navigateChapter(-1);
+                if (target.closest('#next-chapter-btn')) navigateChapter(1);
+
+                const letterNode = target.closest('.letter-node');
+                if (letterNode) {
+                    const letter = letterNode.dataset.letter;
+                    const parent = letterNode.dataset.parent;
+                    if (examplesData[parent] && examplesData[parent][letter]) {
+                        const data = examplesData[parent][letter];
+                        const parentCard = letterNode.closest('.rule-card');
+                        if (parentCard) {
+                            const examplesContainer = parentCard.querySelector('.examples-container');
+                            if (examplesContainer) {
+                                parentCard.querySelectorAll('.letter-node').forEach(n => n.classList.remove('active'));
+                                letterNode.classList.add('active');
+                                
+                                let examplesHtml = '';
+                                if (data.examples) { examplesHtml = data.examples.map(ex => `<div class="example-item">${ex}</div>`).join(''); }
+                                else { examplesHtml = `<div><p class="example-title">مع النون الساكنة:</p>${data.noun.map(ex => `<div class="example-item">${ex}</div>`).join('')}</div><div class="mt-4 pt-4 border-t border-amber-200/20"><p class="example-title">مع التنوين:</p>${data.tanween.map(ex => `<div class="example-item">${ex}</div>`).join('')}</div>`; }
+                                examplesContainer.innerHTML = `<div class="example-panel"><h4 class="text-xl font-bold mb-4">${data.title}</h4>${examplesHtml}</div>`;
+                                addAudioIconsToExamples(examplesContainer);
+                            }
+                        }
+                    }
+                }
+
+                const audioIcon = target.closest('.audio-icon');
+                if (audioIcon) {
+                    const audioId = audioIcon.dataset.audioId;
+                    playAudio(audioId);
+                    return;
+                }
+            });
             
-            initializeGlobalEventListeners();
-            reinitializeEventListeners(document.body); // FIX: Ensure initial listeners are attached
+            reinitializeEventListeners(document.body);
+            initializeQuiz(document.getElementById('quiz-section'));
         });
     </script>
 </body>
 </html>
+
